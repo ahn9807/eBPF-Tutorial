@@ -3,7 +3,6 @@
 from bcc import BPF
 
 bpf_txt = """
-
 int hello_skb(struct __sk_buff *skb) {
     bpf_trace_printk("sk_buff\\n");
     return 1;
