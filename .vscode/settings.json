@@ -2,6 +2,8 @@
 	"files.associations": {
 		"*.rmd": "markdown",
 		"bpf.h": "c",
-		"types.h": "c"
+		"types.h": "c",
+		"netlink.h": "c",
+		"socket.h": "c"
 	}
 }

@@ -8,7 +8,7 @@ int main(int argc, char **argv)
 	struct bpf_program *prog;
 
 	// BPF object file is parsed.
-	obj = bpf_object__open("/home/ahn9807/ebpf/libbpf/simple.bpf.o");
+	obj = bpf_object__open("./simple.bpf.o");
 	if(libbpf_get_error(obj)) {
 		fprintf(stderr, "ERROR: opening eBPF program failed\n");
 		return -1;
