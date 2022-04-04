@@ -6,6 +6,14 @@ In ubuntu 20.04
 sudo apt-get install bpfcc-tools linux-headers-$(uname -r)
 ```
 
+## Installing libbpf
+> https://github.com/libbpf/libbpf
+
+In ubuntu 20.04
+```bash
+sudo apt-get install -y gcc-multilib
+```
+
 ## libbpf
 ```bash
 make \
