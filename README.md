@@ -12,6 +12,8 @@ sudo apt-get install bpfcc-tools linux-headers-$(uname -r)
 In ubuntu 20.04
 ```bash
 sudo apt-get install -y gcc-multilib
+# In /libbpf/src
+sudo PKG_CONFIG_PATH=/build/usr/lib64/pkgconfig DESTDIR=/build/root make install
 ```
 
 ## libbpf
