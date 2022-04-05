@@ -11,6 +11,7 @@ int main(int argc, char **argv)
 	int sock_fd;
 	struct bpf_object *obj;
 	struct bpf_program *prog;
+	int prev_value = 0;
 
 	// BPF object file is parsed.
 	obj = bpf_object__open("./sync_count.bpf.o");
@@ -40,7 +41,6 @@ int main(int argc, char **argv)
 		struct bpf_map *socket_map = bpf_object__find_map_by_name(obj, "sync_map");
 		int socket_map_fd = bpf_map__fd(socket_map);
 		long key = -1, prev_key = 0;
-		int prev_value = 0;
 
 		while (bpf_map_get_next_key(socket_map_fd, &prev_key, &key) == 0)
 		{

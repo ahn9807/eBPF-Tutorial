@@ -4,6 +4,7 @@
 		"bpf.h": "c",
 		"types.h": "c",
 		"netlink.h": "c",
-		"socket.h": "c"
+		"socket.h": "c",
+		"bpf_core_read.h": "c"
 	}
 }
